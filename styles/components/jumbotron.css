@@ -1,0 +1,34 @@
+.jumbotron-container {
+    height: 500px;
+    border: 1px solid red;
+    display: flex;
+    justify-content: space-between;
+}
+
+.left {
+    width: 100%;
+    height: 500px;
+    padding: 30px 50px;
+    border: 1px solid blue;
+}
+
+.left p {
+    margin-top: 12px; 
+}
+
+.social-icon {
+    display: flex;
+}
+
+.right {
+    width: 100%;
+    height: 500px;
+    border: 1px solid green;
+}
+
+.whale {
+    width: 100%;
+    height: 500px;
+    padding: 30px 50px;
+    border: 1px solid blue;
+}

@@ -1,16 +1,20 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+@import "./config.css";
+@import "./components/jumbotron.css";
+@import "./components/header.css";
+@import "./components/analysis.css";
+@import "./components/daolist.css";
+@import "./details.css";
+
+.main {
+  display: flex;
+  justify-content: center;
+  /* overflow-y: hidden; */
+
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+.container {
+  max-width: toRem(1440);
+  width: 100%;
+  position: relative;
 }
 
-* {
-  box-sizing: border-box;
-}

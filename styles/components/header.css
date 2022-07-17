@@ -1,0 +1,28 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 40px;
+}
+
+.search-input {
+    position: relative;
+    
+}
+
+.search-input input {
+    padding: 6px 8px;
+    outline: none;
+    border-radius: 8px;
+    border: 1px solid #242424;
+    max-width: 250px;
+    width: 100%;
+}
+
+.search-icon {
+    position: absolute;
+    right: 8px;
+    top: 8px;
+
+}
