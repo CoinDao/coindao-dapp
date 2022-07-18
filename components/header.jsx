@@ -10,7 +10,7 @@ const Header = () => {
         <header className='header'>
             <h1>CoinDAO</h1>
             <div className='search-input'>
-                <input type="text" onChange={(e) => setSearch(e.target.value)} placeholder="Search" />
+                <input type="text" onChange={(e) => setSearch(e.target.value)} placeholder="Search CoinDAO" />
                 <BsSearch size={14} className='search-icon' />
             </div>
         </header>
