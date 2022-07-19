@@ -1,9 +1,10 @@
 import Head from 'next/head'
-import React from 'react'
+import React, { useEffect } from 'react'
 import Header from '../components/header'
 import SentimentChart from '../components/chart/SentimentChart';
 import WhaleTokenDistribution from '../components/chart/WhaleTokenDistribution';
 import { LineChart } from '../components/chart/LineChart';
+import AOS from "aos";
 
 const daos = [
   {
@@ -41,6 +42,12 @@ const daos = [
 const Details = () => {
   const name = "UNISWAP" // This will be the name of the DAO selected
 
+  
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
+
   return (
     <div className={""}>
       <Head>
@@ -53,11 +60,9 @@ const Details = () => {
         <div className="container">
           <Header />
           <div>
-            <h3 className='title'>{name}</h3>
+            <h3 data-aos="fade-down" className='title'>{name}</h3>
 
             <div className="line-chart">
-              {/* <LineChart /> */}
-
               {
                 [1,2,3,4,5].map(x => {
                   return (

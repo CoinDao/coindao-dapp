@@ -5,8 +5,6 @@ import { AiFillTwitterCircle } from "react-icons/ai"
 import { FaDiscord } from "react-icons/fa"
 import { PieChart } from './nchart.js/pie'
 import AOS from "aos";
-import "aos/dist/aos.css";
-
 
 const Jumbotron = () => {
 

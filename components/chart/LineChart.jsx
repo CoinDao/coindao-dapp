@@ -56,5 +56,10 @@ export const data = {
 };
 
 export function LineChart() {
-  return <Line options={options} data={data} />;
+  return (
+    <div className='line-cht'>
+      <Line options={options} data={data} />;
+    </div>
+  )
+  
 }

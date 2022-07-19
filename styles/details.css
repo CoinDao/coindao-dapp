@@ -14,7 +14,15 @@
 .line-chart {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 100px;
-    margin: 20px 50px;
+    /* place-items: center; */
+    justify-content: center;
+    grid-gap: 40px;
+    margin: 20px 40px;
     margin-top: 70px;
+}
+
+.line-cht {
+    background: #111721;
+    padding: 30px;
+    
 }
