@@ -25,7 +25,6 @@ export default function Home() {
   const getData = async () => {
     const blockchainResponse = await Fetches.get_all_chain();
     setBlockchain(blockchainResponse);
-    console.log(blockchainResponse);
   };
 
   const reportee = (x, y) => {
@@ -96,7 +95,7 @@ export default function Home() {
                 }}
               >
                 <strong>
-                  {blockchains ? blockchains[0]?.label : "Ethereum Mainnet"}
+                  {formPlace ? formPlace : "Ethereum Mainnet"}
                 </strong>
               </button>
               <button
