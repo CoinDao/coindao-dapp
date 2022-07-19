@@ -6,6 +6,7 @@ import WhaleTokenDistribution from '../components/chart/WhaleTokenDistribution';
 import { LineChart } from '../components/chart/LineChart';
 import AOS from "aos";
 
+
 const daos = [
   {
     id: "1",
@@ -37,7 +38,8 @@ const daos = [
     address: "0x2347689238ae098234234234",
     amount: "100,000"
   }
-]
+];
+
 
 const Details = () => {
   const name = "UNISWAP" // This will be the name of the DAO selected
@@ -60,13 +62,19 @@ const Details = () => {
         <div className="container">
           <Header />
           <div>
-            <h3 data-aos="fade-down" className='title'>{name}</h3>
+            <h3 data-aos="fade-down" className='title__details'>{name}</h3>
 
             <div className="line-chart">
+              <div className="line__chart__back__drop">
+                <img src="/duddle.svg" alt="" />
+              </div>
               {
-                [1,2,3,4,5].map(x => {
+                [1,2,3,4,5].map((x, index) => {
                   return (
-                    <div className="">
+                    <div className="main__line__graph__container" key={index}>
+                      <div className="main__line__graph__container__header">
+                        <h1>KOIN Token</h1>
+                      </div>
                       <LineChart />
                     </div>
                   )

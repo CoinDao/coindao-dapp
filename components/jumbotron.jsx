@@ -23,7 +23,7 @@ const Jumbotron = () => {
              className="left">
                 
                 <h2>CoinDAO Provides Quality Analytics on DAO</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim distinctio harum eveniet. Quae earum quidem recusandae repudiandae.</p>
+                <p>CoinDAO is your one stop destination for systematic analytical data on any DAO and on any BLOCKCHAIN.</p>
                 <div className="social-icon">
                     <a href="">
                         <BsFacebook className='search-icon-banner' color='#242424' />

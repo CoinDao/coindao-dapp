@@ -29,21 +29,36 @@ a {
     border-top-left-radius: 8px;
     border-bottom-left-radius: 8px;
     background: rgba(54, 162, 235, 0.2);
-    border: 1px solid rgba(54, 162, 235, 1);
+    border: none;
+    /* border: 1px solid rgba(54, 162, 235, 1); */
     outline: none;
     color: #f0f8ff;
+    border: 1px solid rgba(54, 162, 235, 0.2);
+    font-family: 'Montserrat';
+    font-size: 18px;
 }
 
 .form-container button {
     padding: 24px 32px;
-    border-top-right-radius: 8px;
-    border-bottom-right-radius: 8px;
-    background: rgba(54, 162, 235, 0.2);
+    background: rgba(54, 163, 235, 0.292);
     border: 1px solid rgba(54, 162, 235, 0.2);
     outline: none;
     cursor: pointer;
     color: #f0f8ff;
 }
+
+.form-container button:hover {
+    opacity: .6;
+}
+
+
+.form-container-submit {
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    background: rgba(54, 163, 235, 0.212);
+}
+
+
 
 .search-address {
     text-align: center;

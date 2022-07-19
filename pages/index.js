@@ -6,13 +6,31 @@ import Daolist from "../components/daolist";
 import Header from "../components/header";
 import Jumbotron from "../components/jumbotron";
 import ReactSlider from "../components/ReactSlider";
+import Fetches from "../components/actions";
+import PopModal from "../components/modal";
+import router from "next/router";
 
 export default function Home() {
   const [data, setData] = useState([]);
+  const [blockchains, setBlockchain] = useState(null);
+  const [popModalState, setPopModalState] = useState(false);
+  const [formPlace, setFormPlace] = useState("Ethereum Mainnet");
+  const [formChain, setFormChain] = useState("1");
+  const [userAddress, setUserAddress] = useState("");
 
-  const getData = () => {
-    const response = axios.get("");
-    setData(response?.data);
+  const popSwitch = () => {
+    setPopModalState(!popModalState);
+  };
+
+  const getData = async () => {
+    const blockchainResponse = await Fetches.get_all_chain();
+    setBlockchain(blockchainResponse);
+    console.log(blockchainResponse);
+  };
+
+  const reportee = (x, y) => {
+    setFormPlace(x);
+    setFormChain(y);
   };
 
   useEffect(() => {
@@ -35,22 +53,59 @@ export default function Home() {
         <div className="main__bk__two"></div>
         <div className="main__bk__three"></div>
         <div className="main__bk__four"></div>
+        <div className="the__back__drop"></div>
 
         <div className="container">
-          <ReactSlider />
+          <iframe
+            className="responsive-iframe"
+            src="https://coinhippo.io?widget=price-marquee&theme=?"
+            title="Price Update"
+            frameBorder="0"
+            width="100%"
+            height="35"
+          ></iframe>
           <Header />
           <Jumbotron />
-          
+
+          <div className="modal__home__container">
+            {popModalState && (
+              <PopModal
+                blockchainData={blockchains}
+                offPopModal={popSwitch}
+                report={reportee}
+              />
+            )}
+          </div>
 
           <div className="">
             <h3 className="search-address">
-              Search for any details with
+              Analysis any DAO on any Blockchain
             </h3>
             <div className="form-container">
-                
-              <input type={'text'} placeholder="Enter Blockchain account" />
-              <button>
-                <strong>ETH</strong>
+              <input
+                type={"text"}
+                placeholder="Enter DAO contract address"
+                value={userAddress}
+                onChange={(e) => {
+                  setUserAddress(e.target.value);
+                }}
+              />
+              <button
+                onClick={() => {
+                  setPopModalState(popSwitch);
+                }}
+              >
+                <strong>
+                  {blockchains ? blockchains[0]?.label : "Ethereum Mainnet"}
+                </strong>
+              </button>
+              <button
+                className="form-container-submit"
+                onClick={() => {
+                  router.push(`/${userAddress}?chainid=${formChain}`);
+                }}
+              >
+                <strong>Analyze</strong>
               </button>
             </div>
           </div>
