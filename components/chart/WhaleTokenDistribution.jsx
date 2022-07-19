@@ -40,7 +40,7 @@ export const data = {
   labels,
   datasets: [
     {
-      label: 'Dataset 1',
+      label: 'DAO Rate',
       data: [1,4,3,4,2,6,7],
       backgroundColor: 'rgba(255, 99, 132, 0.5)',
     },

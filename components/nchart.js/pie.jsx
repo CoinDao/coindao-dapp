@@ -7,11 +7,11 @@ ChartJS.register(ArcElement, Tooltip, Legend);
 
 export function PieChart() {
   const data = {
-    labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+    labels: ['UNISWAP', 'BitDAO', 'Other', 'Gnosis', 'Merit', 'Pokadot'],
     datasets: [
       {
         label: '# of Votes',
-        data: [12, 19, 3, 5, 2, 3],
+        data: [3, 1.2, , 1.1, 0.313, 0.274, 2.7],
         backgroundColor: [
           'rgba(255, 99, 132, 0.2)',
           'rgba(54, 162, 235, 0.2)',

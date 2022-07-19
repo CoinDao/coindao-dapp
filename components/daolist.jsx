@@ -57,23 +57,6 @@ const daos = [
             { retained_by_company: 0.1 }
 
         ]
-    },
-    {
-        name: "Gnosis",
-        description: "The Gnosis DAO community leads Gnosis' strategy in building and promoting prediction-market tools and protocols for finance & governance. It is the producer of MUCH used Gnosis Safe.",
-        logo: "https://deepdao-uploads.s3.us-east-2.amazonaws.com/assets/dao/logo/gnosis.jpeg",
-        website: "https://gnosis.io/",
-        twitter: "https://twitter.com/gnosisPM",
-        telegram: null,
-        discord: "https://discord.com/invite/M39dTHQ",
-        discourse: "https://forum.gnosis.io/",
-        github: "https://github.com/gnosis",
-        g_token: "0x34239ba7623879bf34958034982344242323c",
-        ta: [
-            { sold: 0.9 },
-            { retained_by_company: 0.1 }
-
-        ]
     }
 ]
 const Daolist = () => {
@@ -105,7 +88,7 @@ const Daolist = () => {
                                         {index + 1}
                                     </td>
                                     <td className='list-body-container'>
-                                        <Link href={`/${1}`}>
+                                        <Link href={`/${dao.g_token}?chainid=1`}>
                                             <a className=''>
                                                 <img src={dao.logo} className="list-data-logo-img" style={{ marginRight: "10px" }} /> <span>{dao.name}</span>
                                             </a>
