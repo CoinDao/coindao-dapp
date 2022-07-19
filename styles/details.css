@@ -1,9 +1,28 @@
 .title {
     text-align: center;
+    color: #f0f8ff;
+    font-size: 56px;
+    margin-top: 32px;
 }
 
 .details-analysis {
     display: grid;
     place-items: center;
     grid-template-columns: 1fr 1fr 1fr;
+}
+
+.line-chart {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* place-items: center; */
+    justify-content: center;
+    grid-gap: 40px;
+    margin: 20px 40px;
+    margin-top: 70px;
+}
+
+.line-cht {
+    background: #111721;
+    padding: 30px;
+    
 }

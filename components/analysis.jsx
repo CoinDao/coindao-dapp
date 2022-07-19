@@ -1,7 +1,8 @@
 import React, { Fragment } from 'react'
 import SentimentAnalysisChart from './chart/SentimentAnalysisChart';
 import SentimentChart from './chart/SentimentChart';
-import WhaleTokenDistribution from './chart/WhaleTokenDistribution';
+import WhaleTokenDistribution, { BarChart } from './chart/WhaleTokenDistribution';
+import { PieChart } from './nchart.js/pie';
 
 const Analysis = () => {
   return (
@@ -29,8 +30,12 @@ const Analysis = () => {
             <p>vote participant</p>
           </div>
         </div>
-        <WhaleTokenDistribution />
-        <SentimentChart />
+        <div style={{margin: "0px 30px 0px 50px"}}>
+          <BarChart />
+        </div>
+        <div className="right">
+          <PieChart />
+        </div>
       </div>
     </Fragment>
   )
