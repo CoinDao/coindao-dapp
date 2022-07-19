@@ -42,7 +42,7 @@
     padding: .7rem;
     border: 1px solid #fe3dce96;
     border-radius: 5px;
-    box-shadow: ;
+    /* box-shadow: ; */
 }
 
 .per-anyslsis {
@@ -53,5 +53,5 @@
 
 .lower {
     text-align: center;
-    color: aliceblue;
+    color: #f0f8ff;
 }

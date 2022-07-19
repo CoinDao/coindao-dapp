@@ -1,17 +1,28 @@
-import React, { Fragment } from 'react'
+import React, { Fragment, useEffect } from 'react'
 import SentimentAnalysisChart from './chart/SentimentAnalysisChart'
 import { BsFacebook } from "react-icons/bs"
 import { AiFillTwitterCircle } from "react-icons/ai"
 import { FaDiscord } from "react-icons/fa"
 import { PieChart } from './nchart.js/pie'
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 
 const Jumbotron = () => {
+
+    useEffect(() => {
+        AOS.init();
+        AOS.refresh();
+      }, []);
 
   return (
     <Fragment>
         
         <div className="jumbotron-container">
-            <div className="left">
+            <div data-aos="fade-down"
+                data-aos-easing="ease-out-cubic"
+                data-aos-duration="1500"
+             className="left">
                 
                 <h2>CoinDAO Provides Quality Analytics on DAO</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim distinctio harum eveniet. Quae earum quidem recusandae repudiandae.</p>
@@ -27,7 +38,11 @@ const Jumbotron = () => {
                     </a>
                 </div>
             </div>
-            <div className="right">
+            <div 
+                 data-aos="fade-down"
+                data-aos-easing="ease-out-cubic"
+                data-aos-duration="3000"
+                className="right">
                 <PieChart />
             </div>
         

@@ -40,6 +40,20 @@ export default function Home() {
           <ReactSlider />
           <Header />
           <Jumbotron />
+          
+
+          <div className="">
+            <h3 className="search-address">
+              Search for any details with
+            </h3>
+            <div className="form-container">
+                
+              <input type={'text'} placeholder="Enter Blockchain account" />
+              <button>
+                <strong>ETH</strong>
+              </button>
+            </div>
+          </div>
           <Analysis />
           <Daolist />
         </div>

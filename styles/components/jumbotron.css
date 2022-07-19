@@ -44,7 +44,7 @@
     border-radius: 5px;
 }
 
-.social-icon {
+.social-icon {  
     width: fit-content;
     display: flex;
     justify-content: space-between;
