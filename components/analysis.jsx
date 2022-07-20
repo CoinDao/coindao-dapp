@@ -2,7 +2,7 @@ import React, { Fragment } from 'react'
 import SentimentAnalysisChart from './chart/SentimentAnalysisChart';
 import SentimentChart from './chart/SentimentChart';
 import WhaleTokenDistribution, { BarChart } from './chart/WhaleTokenDistribution';
-import { PieChart } from './nchart.js/pie';
+import { DouChart } from './nchart.js/dou';
 
 const Analysis = () => {
   return (
@@ -34,7 +34,7 @@ const Analysis = () => {
           <BarChart />
         </div>
         <div className="right">
-          <PieChart />
+          <DouChart />
         </div>
       </div>
     </Fragment>

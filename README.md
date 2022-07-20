@@ -1,8 +1,32 @@
+### Project Name: DAOlytics - A multi-chain DAO analytics Dashboard
+
+CoinDAO is a basic open source, multi-chain compatible, fully flexible DAO Analytics Dashboard.
+
+#### Live website : [CoinDAO](https://coindao-dapp.vercel.app/)
+
+#### GitHub Repository : [here](https://github.com/CoinDao/coindao-dapp)
+
+#### Short Pitch : Please see this [pitchdeck](https://www.canva.com/design/DAExSawuwJU/bM04_PNJSpMcUB03UF9hAA/view?utm_content=DAExSawuwJU&utm_campaign=designshare&utm_medium=link&utm_source=sharebutton) explaining the Pain points, Target Audience and the solution
+
+#### Running the app
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
 
-First, run the development server:
+First, clone the repo with the following git command:
+
+Second, open a terminal in the root directory of the project and run:
+
+```bash
+npm install
+```
+
+to install all the package dependencies for the project
+
+Third, Edit the private keys and insert yours
+
+Finally, run the development server:
 
 ```bash
 npm run dev
@@ -13,6 +37,8 @@ yarn dev
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+
+[Pitch Deck](https://docs.google.com/presentation/d/1RHcegdrgKHpu4yqivy50v6wANBKFkVJCUYJQeMey8V4/edit?usp=sharing)
 
 [API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
 
@@ -33,7 +59,12 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
-## Deploy on Netlify
-To deploy your Next.js app you can use https://www.netlify.com/with/nextjs/
-You can also check 
+<br />
+<br />
+<br />
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Made with :heart:
+by [@developruche](https://github.com/Seth-McKilla),
+[Olah Femi](https://github.com/olahfemi),
+[Abiodun Awoyemi](https://github.com/aagbotemi) and [Yinka Abeeb](https://github.com/Yhinkar)
 

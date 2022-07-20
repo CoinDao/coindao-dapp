@@ -78,7 +78,7 @@ export default function Home() {
 
           <div className="">
             <h3 className="search-address">
-              Analysis any DAO on any Blockchain
+              Analyze any DAO on any Blockchain
             </h3>
             <div className="form-container">
               <input
@@ -94,9 +94,7 @@ export default function Home() {
                   setPopModalState(popSwitch);
                 }}
               >
-                <strong>
-                  {formPlace ? formPlace : "Ethereum Mainnet"}
-                </strong>
+                <strong>{formPlace ? formPlace : "Ethereum Mainnet"}</strong>
               </button>
               <button
                 className="form-container-submit"

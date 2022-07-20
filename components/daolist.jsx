@@ -51,7 +51,7 @@ const daos = [
         discord: "https://discord.com/invite/M39dTHQ",
         discourse: "https://forum.gnosis.io/",
         github: "https://github.com/gnosis",
-        g_token: "0x34239ba7623879bf34958034982344242323c",
+        g_token: "0x6810e776880C02933D47DB1b9fc05908e5386b96",
         ta: [
             { sold: 0.9 },
             { retained_by_company: 0.1 }
