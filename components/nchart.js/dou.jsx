@@ -5,28 +5,22 @@ import { Doughnut } from 'react-chartjs-2';
 ChartJS.register(ArcElement, Tooltip, Legend);
 
 
-export function PieChart() {
+export function DouChart() {
   const data = {
-    labels: ['UNISWAP', 'BitDAO', 'Other', 'Gnosis', 'Merit', 'Pokadot'],
+    labels: ['Positive', 'Negative', 'Neutral'],
     datasets: [
       {
         label: '# of Votes',
-        data: [30, 12, , 11, 3.13, 2.74, 20.7],
+        data: [60,20,20],
         backgroundColor: [
-          'rgba(255, 99, 132, 0.2)',
-          'rgba(54, 162, 235, 0.2)',
-          'rgba(255, 206, 86, 0.2)',
-          'rgba(75, 192, 192, 0.2)',
-          'rgba(153, 102, 255, 0.2)',
-          'rgba(255, 159, 64, 0.2)',
+          'rgba(166, 253, 52, 0.4)',
+          'rgba(203, 115, 21, 0.4)',
+          'rgba(165, 187, 213, 0.4)'
         ],
         borderColor: [
           'rgba(255, 99, 132, 1)',
           'rgba(54, 162, 235, 1)',
           'rgba(255, 206, 86, 1)',
-          'rgba(75, 192, 192, 1)',
-          'rgba(153, 102, 255, 1)',
-          'rgba(255, 159, 64, 1)',
         ],
         borderWidth: 1,
       },
