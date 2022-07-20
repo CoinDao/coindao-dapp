@@ -67,3 +67,4 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 by [@developruche](https://github.com/Seth-McKilla),
 [Olah Femi](https://github.com/olahfemi),
 [Abiodun Awoyemi](https://github.com/aagbotemi) and [Yinka Abeeb](https://github.com/Yhinkar)
+
