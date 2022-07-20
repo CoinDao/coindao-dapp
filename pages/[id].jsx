@@ -16,7 +16,6 @@ const balance = (balance) => {
 
 const Details = () => {
   const { query } = useRouter();
-  console.log("QUERY: ", query);
 
   const name = "UNISWAP" // This will be the name of the DAO selected
   
@@ -59,24 +58,49 @@ const Details = () => {
         <div className="container">
           <Header />
           <div>
-            <h3 data-aos="fade-down" className='title__details'>{daoHistory?.contract_ticker_symbol}</h3>
+            <h3 data-aos="fade-down" className='title__details'>Asset Aggregator</h3>
+            {/* <h3 data-aos="fade-down" className='title__details'>{daoHistory?.contract_ticker_symbol}</h3> */}
 
             <div className="line-chart">
               <div className="line__chart__back__drop">
                 <img src="/duddle.svg" alt="" />
               </div>
-              {
-                [1,2,3,4,5].map((x, index) => {
-                  return (
-                    <div className="main__line__graph__container" key={index}>
-                      <div className="main__line__graph__container__header">
-                        <h1>KOIN Token</h1>
-                      </div>
-                      <LineChart />
-                    </div>
-                  )
-                })
-              }
+              <div className="main__line__graph__container">
+                <div className="main__line__graph__container__header">
+                  <h1>ApeX Protocol</h1>
+                </div>
+                <LineChart chatData={[0.2,0.34,0.22,0.26,0.13,0.17,0.3]}/>
+              </div>
+              <div className="main__line__graph__container">
+                <div className="main__line__graph__container__header">
+                  <h1>BitDAO</h1>
+                </div>
+                <LineChart chatData={[1.8,1.6,1.2,1.2,0.8,0.6,0.5]}/>
+              </div>
+              <div className="main__line__graph__container">
+                <div className="main__line__graph__container__header">
+                  <h1>SushiToken</h1>
+                </div>
+                <LineChart chatData={[5.5,3.5,4.2,3.1,2.1,0.9,1.6]}/>
+              </div>
+              <div className="main__line__graph__container">
+                <div className="main__line__graph__container__header">
+                  <h1>SHIBA INU</h1>
+                </div>
+                <LineChart chatData={[0.000033,0.0000,0.000022,0.000023,0.000008,0.00001,0.000012]}/>
+              </div>
+              <div className="main__line__graph__container">
+                <div className="main__line__graph__container__header">
+                  <h1>USDT</h1>
+                </div>
+                <LineChart chatData={[1,1,1,1,1,1,1]}/>
+              </div>
+              <div className="main__line__graph__container">
+                <div className="main__line__graph__container__header">
+                  <h1>ETHER</h1>
+                </div>
+                <LineChart chatData={[2532,3200,2943,3400,2349,1125,1544]}/>
+              </div>
             </div>
           </div>
 
@@ -137,27 +161,32 @@ const Details = () => {
               </thead>
 
               <tbody>
-                {latestTx.slice(0,15).map((history, index) => {
-                  return (
-                    <tr key={index}>
-                      <td className='number'>
-                        {index + 1}
-                      </td>
-                      <td className=''>
-                        <div>{history.from_address.substring(0, 6)}...{history.from_address.slice(-4)}</div>
-                        <div>{history.from_address_label ? [history.from_address_label] : null }</div>
-                      </td>
-                      <td className=''>
-                        <div>{history.to_address.substring(0, 6)}...{history.to_address.slice(-4)}</div>
-                        <div>{history.to_address_label ? [history.to_address_label] : null }</div>
-                      </td>
-                      {/* <td className=''>{history.to_address}</td> */}
-                      <td className=''>{history.fees_paid}</td>
-                      <td className=''>{history.successful ? "Successful" : "Failed"}</td>
-                    </tr>
-                  )
-                })}
-
+                {
+                  latestTx ? (
+                    <>
+                      {latestTx.slice(0,15).map((history, index) => {
+                        return (
+                          <tr key={index}>
+                            <td className='number'>
+                              {index + 1}
+                            </td>
+                            <td className=''>
+                              <div>{history.from_address.substring(0, 6)}...{history.from_address.slice(-4)}</div>
+                              <div>{history.from_address_label ? [history.from_address_label] : null }</div>
+                            </td>
+                            <td className=''>
+                              <div>{history.to_address.substring(0, 6)}...{history.to_address.slice(-4)}</div>
+                              <div>{history.to_address_label ? [history.to_address_label] : null }</div>
+                            </td>
+                            {/* <td className=''>{history.to_address}</td> */}
+                            <td className=''>{history.fees_paid}</td>
+                            <td className=''>{history.successful ? "Successful" : "Failed"}</td>
+                          </tr>
+                        )
+                      })}
+                    </>
+                  ) : ""
+                }
               </tbody>
 
             </table>
@@ -183,22 +212,28 @@ const Details = () => {
               </thead>
 
               <tbody>
-                {daoAssets.map((asset, index) => {
-                  return (
-                    <tr key={index}>
-                      <td className='number'>
-                        {index + 1}
-                      </td>
-                      <td className='list-body-container'>
-                      <img src={asset.logo_url ? asset.logo_url : 'https://via.placeholder.com/300/09f/fff.png'} className="list-data-logo-img" style={{ marginRight: "10px" }} /><span>{asset.contract_name}</span>
-                      </td>
-                      <td className=''>
-                        {asset.balance}
-                      </td>
-                      <td className=''>{asset.quote}</td>
-                    </tr>
-                  )
-                })}
+                {
+                  daoAssets ? (
+                    <>
+                      {daoAssets.map((asset, index) => {
+                        return (
+                          <tr key={index}>
+                            <td className='number'>
+                              {index + 1}
+                            </td>
+                            <td className='list-body-container'>
+                            <img src={asset.logo_url ? asset.logo_url : 'https://via.placeholder.com/300/09f/fff.png'} className="list-data-logo-img" style={{ marginRight: "10px" }} /><span>{asset.contract_name}</span>
+                            </td>
+                            <td className=''>
+                              {asset.balance}
+                            </td>
+                            <td className=''>{asset.quote}</td>
+                          </tr>
+                        )
+                      })}
+                    </>
+                  ) : ""
+                }
 
               </tbody>
 
